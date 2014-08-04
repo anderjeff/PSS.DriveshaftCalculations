@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PSS.DriveshaftCalculations.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DataFilePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\ps001\data2\Engineering\Programs\Driveshaft Wizard\Data.xml</Value>
+    </Setting>
+    <Setting Name="LoggedDataFileDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\ps001\data2\Engineering\Programs\Driveshaft Wizard\Logs</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

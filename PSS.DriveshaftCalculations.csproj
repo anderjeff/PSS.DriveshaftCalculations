@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5CC49E63-0503-4F0C-B944-711F02D2A220}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSS.DriveshaftCalculations</RootNamespace>
+    <AssemblyName>PSS.DriveshaftCalculations</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PSS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PSS.Common\bin\Release\PSS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analysis\AnalysisResult.cs" />
+    <Compile Include="Analysis\ConditionAnalyzer.cs" />
+    <Compile Include="Calculations\Accelerations.cs" />
+    <Compile Include="Calculations\AngleFactor.cs" />
+    <Compile Include="Calculations\B10Life.cs" />
+    <Compile Include="Calculations\CriticalSpeed.cs" />
+    <Compile Include="Calculations\EquivalentTorque.cs" />
+    <Compile Include="Calculations\LifeFactor.cs" />
+    <Compile Include="Calculations\LowGearTorque.cs" />
+    <Compile Include="Calculations\PowerCalculations.cs" />
+    <Compile Include="Calculations\PowerFactor.cs" />
+    <Compile Include="Calculations\ServiceFactor.cs" />
+    <Compile Include="Calculations\ShockLoad.cs" />
+    <Compile Include="Calculations\TorqueUnitConverter.cs" />
+    <Compile Include="Calibration\AccelerationCalibration.cs" />
+    <Compile Include="Calibration\BearingLifeCalibration.cs" />
+    <Compile Include="Calibration\CriticalSpeedCalibration.cs" />
+    <Compile Include="Calibration\ICalibration.cs" />
+    <Compile Include="Calibration\StandardDataEnteredCalibration.cs" />
+    <Compile Include="Collections\B10LifeCollection.cs" />
+    <Compile Include="Collections\CriticalSpeedCollection.cs" />
+    <Compile Include="Collections\DriveshaftLayoutCollection.cs" />
+    <Compile Include="Collections\DriveshaftSeriesCollection.cs" />
+    <Compile Include="Collections\SelectedDriveshaftCollection.cs" />
+    <Compile Include="Collections\ServiceFactorCollection.cs" />
+    <Compile Include="Collections\TubeCollection.cs" />
+    <Compile Include="Data\DataLoader.cs" />
+    <Compile Include="Data\DataSetMaker.cs" />
+    <Compile Include="Data\DataTableMaker.cs" />
+    <Compile Include="DriveshaftParts\Driveshaft.cs" />
+    <Compile Include="DriveshaftParts\DriveshaftLayout.cs" />
+    <Compile Include="DriveshaftParts\DriveshaftSeries.cs" />
+    <Compile Include="DriveshaftParts\EnglishDriveshaftSeries.cs" />
+    <Compile Include="DriveshaftParts\MetricDriveshaftSeries.cs" />
+    <Compile Include="DriveshaftParts\OperatingCondition.cs" />
+    <Compile Include="DriveshaftParts\Tube.cs" />
+    <Compile Include="DriveshaftParts\UniversalJoint.cs" />
+    <Compile Include="DutyCycle\DutyCycleCollection.cs" />
+    <Compile Include="DutyCycle\DutyCycleCondition.cs" />
+    <Compile Include="DutyCycle\DutyCycleConditionCollection.cs" />
+    <Compile Include="DutyCycle\PercentageChangeEventArgs.cs" />
+    <Compile Include="Paperwork\SelectedDriveshaft.cs" />
+    <Compile Include="Paperwork\SelectedUjoint.cs" />
+    <Compile Include="Paperwork\Change.cs" />
+    <Compile Include="Paperwork\DriveshaftApplicationData.cs" />
+    <Compile Include="Paperwork\SupportingDocument.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\LoggedFiles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
